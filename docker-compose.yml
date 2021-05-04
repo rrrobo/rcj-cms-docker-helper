@@ -13,6 +13,7 @@ services:
       - ./conf/nginx/certs:/etc/nginx/certs
       - ./data/public:/opt/rcj-cms/public
       - ./logs:/opt/rcj-cms/logs
+      - ./conf/nginx/errorPage:/etc/nginx/html/customError
     depends_on: 
       - rcj-cms
 
