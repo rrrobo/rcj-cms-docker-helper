@@ -1,0 +1,7 @@
+data/cabinet/*
+data/db/*
+data/documents/*
+data/fonts/*
+data/public/*
+data/redis/*
+data/tmp/*
