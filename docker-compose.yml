@@ -1,0 +1,47 @@
+version: '3'
+services:
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ./conf/nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./conf/nginx/certs:/etc/nginx/certs
+      - ./data/public:/opt/rcj-cms/public
+      - ./logs:/opt/rcj-cms/logs
+    depends_on: 
+      - rcj-cms
+
+  rcj-cms:
+    image: ryorobo/rcj-cms:latest
+    container_name: rcj-cms
+    depends_on: 
+      - mongo
+    volumes:
+      - ./data/documents:/opt/rcj-cms/documents
+      - ./data/cabinet:/opt/rcj-cms/cabinet
+      - ./conf/rcj-cms/leagues.json:/opt/rcj-cms/leagues.json
+      - ./conf/rcj-cms/process.env:/opt/rcj-cms/process.env
+      - ./data/templates:/opt/rcj-cms/templates
+      - ./data/fonts:/opt/rcj-cms/fonts
+      - ./logs:/opt/rcj-cms/logs
+      - ./data/public:/opt/rcj-cms/sharePublic
+      - ./data/tmp:/opt/rcj-cms/tmp
+    command: >
+      sh -c 'cp -f -r /opt/rcj-cms/public/* /opt/rcj-cms/sharePublic &&
+      node server.js'
+
+  mongo:
+    image: mongo:latest
+    container_name: "mongo"
+    command: 
+      - mongod
+    volumes:
+      - ./data/db:/data/db
+  redis:
+    image: "redis:latest"
+    volumes:
+      - "./data/redis:/data"

@@ -1,0 +1,5 @@
+[
+  {"type": "line", "id": "LineNL", "name": "日本リーグ レスキュー"},
+  {"type": "line", "id": "LineWL", "name": "ワールドリーグ レスキューLine"},
+  {"type": "maze", "id": "Maze",   "name": "ワールドリーグ レスキューMaze"}
+]
