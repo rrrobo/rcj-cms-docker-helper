@@ -2,7 +2,7 @@ version: '3'
 services:
   nginx:
     image: nginx:latest
-    container_name: nginx
+    container_name: "rcj-cms-nginx"
     ports:
       - 3000:80
       #- 80:80
@@ -18,7 +18,7 @@ services:
 
   rcj-cms:
     image: ryorobo/rcj-cms:latest
-    container_name: rcj-cms
+    container_name: "rcj-cms-node"
     depends_on: 
       - mongo
       - redis
@@ -38,12 +38,13 @@ services:
 
   mongo:
     image: mongo:latest
-    container_name: "mongo"
+    container_name: "rcj-cms-mongo"
     command: 
       - mongod
     volumes:
       - ./data/db:/data/db
   redis:
     image: "redis:latest"
+    container_name: "rcj-cms-redis"
     volumes:
       - "./data/redis:/data"
