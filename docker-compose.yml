@@ -20,6 +20,7 @@ services:
     container_name: rcj-cms
     depends_on: 
       - mongo
+      - redis
     volumes:
       - ./data/documents:/opt/rcj-cms/documents
       - ./data/cabinet:/opt/rcj-cms/cabinet
