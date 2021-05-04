@@ -5,3 +5,4 @@ data/fonts/*
 data/public/*
 data/redis/*
 data/tmp/*
+logs/*
