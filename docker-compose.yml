@@ -16,6 +16,7 @@ services:
       - ./conf/nginx/errorPage:/etc/nginx/html/customError
     depends_on: 
       - rcj-cms
+    restart: always
 
   rcj-cms:
     image: ryorobo/rcj-cms:latest
@@ -36,6 +37,8 @@ services:
     command: >
       sh -c 'cp -f -r /opt/rcj-cms/public/* /opt/rcj-cms/sharePublic &&
       node server.js'
+    restart: always
+
 
   mongo:
     image: mongo:latest
@@ -44,8 +47,12 @@ services:
       - mongod
     volumes:
       - ./data/db:/data/db
+    restart: always
+
+
   redis:
     image: "redis:latest"
     container_name: "rcj-cms-redis"
     volumes:
       - "./data/redis:/data"
+    restart: always
