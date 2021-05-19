@@ -10,7 +10,7 @@ services:
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - ./conf/nginx/nginx.conf:/etc/nginx/nginx.conf
-      - ./conf/nginx/certs:/etc/nginx/certs
+      #- /etc/letsencrypt:/etc/letsencrypt
       - ./data/public:/opt/rcj-cms/public
       - ./logs:/opt/rcj-cms/logs
       - ./conf/nginx/errorPage:/etc/nginx/html/customError
