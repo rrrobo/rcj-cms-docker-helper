@@ -3,9 +3,9 @@
 This is a helper file used to start up the RCJ CMS with a Docker image.
 
 ## Supported environment
-Windows 10 Pro / Enterprise / Education / Home  
-Ubuntu 20.04LTS
-macOS 11.0
+* Windows 10/11 Pro / Enterprise / Education / Home  
+* Ubuntu 20.04LTS
+* macOS 11.0
 
 ## Tested environment(Windows)
 OS : Windows 10 Education 20H2, Windows 11 Education
