@@ -1,6 +1,6 @@
 # RoboCup Junior
 ### Helper file for rescue scoring system environment construction
-This is a helper file used to build the RCJ CMS with a Docker image.
+This is a helper file used to start up the RCJ CMS with a Docker image.
 
 ## Supported environment
 Windows 10 Pro / Enterprise / Education / Home  
@@ -8,15 +8,17 @@ Ubuntu 20.04LTS
 macOS 11.0
 
 ## Tested environment(Windows)
-OS : Windows 10 Education 20H2  
+OS : Windows 10 Education 20H2, Windows 11 Education
 CPU : AMD Ryzen9 3900X  
 RAM : 32GB
 
 ## Tested environment(Linux)
-* Ubuntu 16.04 LTS
 * Ubuntu 18.04 LTS
+* Ubuntu 20.04 LTS
 * Synology DiskStation DSM 6.2 (Official Docker Package Installed)
-* QNAP QTS4.5.4
+* Synology DiskStation DSM 7.0 (Official Docker Package Installed)
+* QNAP QTS4.5.4 (Official Docker Package Installed)
+* QNAO QTS5.0.0 (Official Docker Package Installed)
 * macOS 10.14 Mojave
 
 ## Setup
@@ -56,7 +58,7 @@ To restart the system, run "restart".
 To update, run "update".
 
 ## Change password of admin account
-If you want to change the admin account password, edit the file `process.env` in the setup helper directory (rcj-scoring-docker) with a suitable editor.
+If you want to change the admin account password, edit the file `conf/rcj-cms/process.env` with a suitable editor.
 
 ```
 # db vars see more at http://mongoosejs.com/docs/connections.html
