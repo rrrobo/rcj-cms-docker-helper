@@ -1,5 +1,0 @@
-[
-  {"type": "line", "id": "Line", "name": "Rescue Line"},
-  {"type": "maze", "id": "Maze", "name": "Rescue Maze"},
-  {"type": "other", "id": "Erebus", "name": "Rescue Simulation"}
-]

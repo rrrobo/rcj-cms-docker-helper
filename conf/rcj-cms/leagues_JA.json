@@ -1,6 +1,7 @@
 [
-  {"type": "line", "id": "Line", "name": "レスキュー・ライン"},
-  {"type": "line", "id": "LineNL", "name": "レスキュー・ライン・エントリー"},
-  {"type": "maze", "id": "Maze", "name": "レスキュー・メイズ"},
-  {"type": "maze", "id": "MazeNL", "name": "レスキュー・メイズ・エントリー"}
+  {"type": "line", "id": "Line", "name": "Rescue Line"},
+  {"type": "line", "id": "LineNL", "name": "Rescue Line Entry"},
+  {"type": "maze", "id": "Maze", "name": "Rescue Maze"},
+  {"type": "maze", "id": "MazeNL", "name": "Rescue Maze Entry"},
+  {"type": "simulation", "id": "Erebus", "name": "Rescue Simulation (Erebus)"}
 ]

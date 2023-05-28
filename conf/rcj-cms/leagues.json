@@ -1,4 +1,5 @@
 [
   {"type": "line", "id": "Line", "name": "Rescue Line"},
-  {"type": "maze", "id": "Maze", "name": "Rescue Maze"}
+  {"type": "maze", "id": "Maze", "name": "Rescue Maze"},
+  {"type": "simulation", "id": "Erebus", "name": "Rescue Simulation (Erebus)"}
 ]
