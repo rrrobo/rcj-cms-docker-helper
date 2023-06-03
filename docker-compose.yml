@@ -27,6 +27,7 @@ services:
     volumes:
       - ./data/documents:/opt/rcj-cms/documents
       - ./data/cabinet:/opt/rcj-cms/cabinet
+      - ./data/survey:/opt/rcj-cms/survey
       - ./conf/rcj-cms/leagues.json:/opt/rcj-cms/leagues.json
       - ./conf/rcj-cms/process.env:/opt/rcj-cms/process.env
       - ./data/templates:/opt/rcj-cms/templates
