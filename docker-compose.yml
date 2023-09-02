@@ -1,7 +1,7 @@
 version: '3'
 services:
   nginx:
-    image: nginx:latest
+    image: nginx:1.25-alpine
     container_name: "rcj-cms-nginx"
     ports:
       - 3000:80
@@ -42,7 +42,7 @@ services:
 
 
   mongo:
-    image: mongo:latest
+    image: mongo:6
     container_name: "rcj-cms-mongo"
     command: 
       - mongod
@@ -52,7 +52,7 @@ services:
 
 
   redis:
-    image: "redis:latest"
+    image: "redis:7-alpine"
     container_name: "rcj-cms-redis"
     volumes:
       - "./data/redis:/data"
