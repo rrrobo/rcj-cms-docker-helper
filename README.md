@@ -4,8 +4,8 @@ This is a helper file used to start up the RCJ CMS with a Docker image.
 
 ## Supported environment
 * Windows 10/11 Pro / Enterprise / Education / Home  
-* Ubuntu 20.04LTS
-* macOS 11.0
+* Ubuntu 22.04LTS
+* macOS 14.0
 
 ## Tested environment(Windows)
 OS : Windows 10 Education 20H2, Windows 11 Education
@@ -15,11 +15,12 @@ RAM : 32GB
 ## Tested environment(Linux)
 * Ubuntu 18.04 LTS
 * Ubuntu 20.04 LTS
-* Synology DiskStation DSM 6.2 (Official Docker Package Installed)
-* Synology DiskStation DSM 7.0 (Official Docker Package Installed)
-* QNAP QTS4.5.4 (Official Docker Package Installed)
-* QNAO QTS5.0.0 (Official Docker Package Installed)
+* Ubuntu 22.04 LTS
+* Synology DiskStation DSM 7.X (Official Docker Package Installed)
+
+## Tested environment(Mac)
 * macOS 10.14 Mojave
+* macOS 14 Sonoma
 
 ## Setup
 ** Please make sure Docker and DockerCompose are installed and ready to use.**
